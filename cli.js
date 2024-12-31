@@ -8,7 +8,7 @@ const semver = require('semver')
 const isReachable = require('is-reachable')
 const pckgjson = JSON.parse(readFileSync('package.json').toString())
 const registryURL = 'https://registry.npmjs.org/'
-// console.log(JSON.stringify())
+console.log(JSON.stringify())
 const { names, keyWords, devDeps, scripts } = require('./requirements.json')
 tap.equal(names.map(name => existsSync(name)).every(bool => bool === true), true)
 tap.equal(keyWords.every(r => Object.keys(pckgjson).includes(r)), true)
